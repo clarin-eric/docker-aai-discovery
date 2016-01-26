@@ -6,7 +6,12 @@ RUN rm -r /var/lib/tomcat8/webapps/ROOT
 COPY webapp/discovery /var/lib/tomcat8/webapps/discovery
 COPY webapp/metadata-api /var/lib/tomcat8/webapps/metadata-api
 
+USER root
+
 RUN mkdir -p /data
 ADD idps.json /data/idps.json
+RUN chown -R tomcat8 /data
+
+USER tomcat8
 
 VOLUME ["/data"]
