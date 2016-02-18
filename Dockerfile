@@ -1,4 +1,4 @@
-FROM docker.clarin.eu/tomcat8:1.0.0
+FROM docker.clarin.eu/tomcat8-sslonly:1.0.0
 
 #Remove default webapp
 RUN rm -r /var/lib/tomcat8/webapps/ROOT
@@ -12,6 +12,6 @@ RUN mkdir -p /data
 ADD idps.json /data/idps.json
 RUN chown -R tomcat8 /data
 
-USER tomcat8
+#USER tomcat8
 
 VOLUME ["/data"]

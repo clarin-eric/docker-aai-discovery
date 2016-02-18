@@ -1,7 +1,6 @@
 #!/bin/sh
 
-ARCHIVE_WEBAPP="https://b2drop.eudat.eu/public.php?service=files&t=2b727a0c081792d4a7fdb1067991d988&download"
-#NAME="component-registry-rest-2.0-beta4"
+ARCHIVE_WEBAPP="https://b2drop.eudat.eu/public.php?service=files&t=06fc19000c65b86ddec7761eb9fd6ca9&download"
 
 echo "Downloading external resources"
 
@@ -12,4 +11,5 @@ tar -xf *.tar.gz && \
 mkdir -p discovery && \
 mkdir -p metadata-api && \
 cd discovery && unzip ../discovery-service-*.war &> /dev/null && cd .. && \
-cd metadata-api && unzip ../metadata-api-1.8.2.1.war &> /dev/null && cd ..
+cd metadata-api && unzip ../metadata-api-*.war &> /dev/null && cd .. && \
+cp web.xml metadata-api/WEB-INF/
