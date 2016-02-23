@@ -1,4 +1,4 @@
-# CLARIN docker tomcat image
+# CLARIN docker discovery service image
 Packages:
 
 Volumes:
@@ -26,9 +26,11 @@ Using the docker client you can easily start a container based on this image:
 docker run \
 	-ti \
 	--rm \
-	-p 8009 \
-	-p 8080 \
 	-p 8443 \
 	-e PASSWORD="averysecurepassword" \
-	docker.clarin.eu/tomcat8:1.0.1
+	docker.clarin.eu/aai-discovery:1.9.1
 ```
+
+After starting the container you can access `https://<docker_ip>:<docker_8443_port>/discovery/`. Since the site uses a self signed certificate you have to accept the browser warning.
+
+In a production deployment you 
