@@ -1,4 +1,4 @@
-FROM docker.clarin.eu/tomcat8:1.1.3
+FROM docker.clarin.eu/tomcat8:1.1.4
 
 #Remove default webapp
 RUN rm -r /var/lib/tomcat8/webapps/ROOT
