@@ -1,6 +1,7 @@
 #!/bin/sh
 
-ARCHIVE_WEBAPP="https://b2drop.eudat.eu/public.php?service=files&t=06fc19000c65b86ddec7761eb9fd6ca9&download"
+#ARCHIVE_WEBAPP="https://b2drop.eudat.eu/public.php?service=files&t=06fc19000c65b86ddec7761eb9fd6ca9&download"
+ARCHIVE_WEBAPP="https://b2drop.eudat.eu/index.php/s/j6ULVa1rOVW6IlR/download"
 
 echo "Downloading external resources"
 
